@@ -21,7 +21,7 @@ function hbooth_recaptcha_form_handler($form)
     if ($recaptchaResponse->isSuccess()) {
         $form->redispatch('perch_forms');
     } else {
-        $form->throw_error('ERROR', 'Failed to pass Recaptcha.');
+        $form->throw_error('error', 'recaptcha');
     }
 }
 
